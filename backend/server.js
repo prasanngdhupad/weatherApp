@@ -12,7 +12,10 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://weather-app-puce-six-23.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
